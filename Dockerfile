@@ -1,0 +1,9 @@
+FROM eclipse-temurin:11-jdk
+
+WORKDIR /app
+
+COPY . .
+
+RUN javac src/DockerExample.java
+
+CMD ["java", "-cp", "src", "DockerExample"]
